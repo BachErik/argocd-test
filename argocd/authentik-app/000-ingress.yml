@@ -8,10 +8,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - authentik.secschool.net
+    - authentik.bacherik.eu
     secretName: authentik-tls
   rules:
-  - host: "authentik.secschool.net"
+  - host: "authentik.bacherik.eu"
     http:
       paths:
       - path: /
