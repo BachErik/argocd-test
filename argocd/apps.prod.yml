@@ -8,13 +8,13 @@ applications:
         helm:
           releaseName: authentik
           valueFiles:
-            - https://raw.githubusercontent.com/NikOverflow/argocd-test/master/argocd/authentik-app/authentik-values.yml
-      - repoURL: "https://github.com/NikOverflow/argocd-test.git"
+            - https://raw.githubusercontent.com/BachErik/argocd-test/master/argocd/authentik-app/authentik-values.yml
+      - repoURL: "https://github.com/BachErik/argocd-test.git"
         path: argocd/authentik-app/
         targetRevision: HEAD
   nginx-test:
     enabled: true
     sources:
-      - repoURL: "https://github.com/NikOverflow/argocd-test.git"
+      - repoURL: "https://github.com/BachErik/argocd-test.git"
         path: argocd/nginx-test-app/
         targetRevision: HEAD
