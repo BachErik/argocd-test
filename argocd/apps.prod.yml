@@ -1,6 +1,6 @@
 applications:
   authentik:
-    enabled: true
+    enabled: false
     sources:
       - repoURL: "https://charts.goauthentik.io"
         chart: authentik
@@ -12,9 +12,9 @@ applications:
       - repoURL: "https://github.com/BachErik/argocd-test.git"
         path: argocd/authentik-app/
         targetRevision: HEAD
-  nginx-test:
+  nginx-download:
     enabled: true
     sources:
       - repoURL: "https://github.com/BachErik/argocd-test.git"
-        path: argocd/nginx-test-app/
+        path: argocd/nginx-download/
         targetRevision: HEAD
