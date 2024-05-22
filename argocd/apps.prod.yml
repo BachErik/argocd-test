@@ -21,6 +21,12 @@ applications:
   gethomepage:
     enabled: true
     sources:
+      - repoURL: "https://jameswynn.github.io/helm-charts"
+        chart: jameswynn
+        helm:
+          releaseName: homepage
+          valueFiles:
+            - https://raw.githubusercontent.com/BachErik/argocd-test/master/argocd/gethomepage/gethomepage-values.yml
       - repoURL: "https://github.com/BachErik/argocd-test.git"
         path: argocd/gethomepage
         targetRevision: HEAD
