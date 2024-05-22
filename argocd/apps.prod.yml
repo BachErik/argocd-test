@@ -18,3 +18,9 @@ applications:
       - repoURL: "https://github.com/BachErik/argocd-test.git"
         path: argocd/nginx-download/
         targetRevision: HEAD
+  gethomepage:
+    enabled: true
+    sources:
+      - repoURL: "https://github.com/BachErik/argocd-test.git"
+        path: argocd/gethomepage
+        targetRevision: HEAD
