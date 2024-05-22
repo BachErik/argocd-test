@@ -10,7 +10,7 @@ spec:
     server: "https://kubernetes.default.svc"
   source:
     path: argocd/app-chart/
-    repoURL: "https://github.com/NikOverflow/argocd-test.git"
+    repoURL: "https://github.com/BachErik/argocd-test.git"
     targetRevision: HEAD
     helm:
       valueFiles:
