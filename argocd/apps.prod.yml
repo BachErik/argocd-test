@@ -22,7 +22,7 @@ applications:
     enabled: true
     sources:
       - repoURL: "https://jameswynn.github.io/helm-charts"
-        chart: jameswynn
+        chart: homepage
         targetRevision: 1.2.3
         helm:
           releaseName: homepage
