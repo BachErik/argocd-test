@@ -19,7 +19,7 @@ applications:
         path: argocd/nginx-download/
         targetRevision: HEAD
   gethomepage:
-    enabled: false
+    enabled: true
     sources:
       - repoURL: "https://jameswynn.github.io/helm-charts"
         chart: homepage
