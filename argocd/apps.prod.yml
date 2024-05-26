@@ -18,8 +18,8 @@ applications:
       - repoURL: "https://github.com/BachErik/argocd-test.git"
         path: argocd/nginx-download/
         targetRevision: HEAD
-  gethomepage:
-    enabled: true
+  gethomepage-helm:
+    enabled: false
     sources:
       - repoURL: "https://jameswynn.github.io/helm-charts"
         chart: homepage
@@ -27,7 +27,21 @@ applications:
         helm:
           releaseName: homepage
           valueFiles:
-            - https://raw.githubusercontent.com/BachErik/argocd-test/master/argocd/gethomepage/gethomepage-values.yml
+            - https://raw.githubusercontent.com/BachErik/argocd-test/master/argocd/gethomepage-helm/gethomepage-values.yml
+      - repoURL: "https://github.com/BachErik/argocd-test.git"
+        path: argocd/gethomepage-helm/
+        targetRevision: HEAD
+  gethomepage:
+    enabled: false
+    sources:
       - repoURL: "https://github.com/BachErik/argocd-test.git"
         path: argocd/gethomepage/
         targetRevision: HEAD
+  kubernetes-dashboard-ui:
+    enabled: true
+      sources:
+        - repoURL: "https://kubernetes.github.io/dashboard/"
+          chart: kubernetes-dashboard
+          targetRevision: 7.4.0
+          helm:
+            releaseName: kubernetes-dashboard 
