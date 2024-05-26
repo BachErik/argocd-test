@@ -8,52 +8,165 @@ metadata:
 data:
   kubernetes.yaml: |
     mode: cluster
-  settings.yaml: ""
-  #settings.yaml: |
-  #  providers:
-  #    longhorn:
-  #      url: https://longhorn.my.network
+  settings.yaml: |
+    # For configuration options and examples, please see:
+    # https://gethomepage.dev/latest/configs/settings
+
+    providers:
+      openweathermap: openweathermapapikey
+      weatherapi: weatherapiapikey
+    title: The Home of Erik
+    background:
+      image: https://static-cdn.jtvnw.net/jtv_user_pictures/4d590367-c265-4d2e-ab4b-d7ddae003631-profile_banner-480.png
+      blur: sm # sm, "", md, xl... see https://tailwindcss.com/docs/backdrop-blur
+      saturate: 50 # 0, 50, 100... see https://tailwindcss.com/docs/backdrop-saturate
+      brightness: 50 # 0, 50, 75... see https://tailwindcss.com/docs/backdrop-brightness
+      opacity: 50 # 0-100
+    cardBlur: sm # sm, "", md, etc... see https://tailwindcss.com/docs/backdrop-blur
+    favicon: https://avatars.githubusercontent.com/u/75324423?v=4
+    theme: dark # or light
+    color: slate
   custom.css: ""
   custom.js: ""
   bookmarks.yaml: |
-    - Developer:
-        - Github:
-            - abbr: GH
-              href: https://github.com/
+    # For configuration options and examples, please see:
+    # https://gethomepage.dev/latest/configs/bookmarks
+
+    - ME-System:
+        - 1.17:
+            - abbr: 17
+              href: https://bacherik.de:2244/minecraft/maps/ME-System/ME-System_1.17.zip
+              icon: minecraft.png
+              description: dwnload the minecraft ME-System for Minecraft version 1.17
+        - 1.18 / 1.19:
+            - abbr: 18
+              href: https://bacherik.de:2244/minecraft/maps/ME-System/ME-System_1.18-1.19.zip
+              icon: minecraft.png
+              description: download the minecraft ME-System for Minecraft versions 1.18 and 1.19
+        - 1.20.x:
+            - abbr: 20.x
+              href: https://bacherik.de:2244/minecraft/maps/ME-System/ME-System_1.20.x.zip
+              icon: minecraft.png
+              description: download the minecraft ME-System for Minecraft version 1.20.x
+
+    - GitHub:
+        - BachErik:
+            - abbr: BE
+              href: https://github.com/BachErik
+              icon: github-light.png
+              description: Hier sieht man wie schlecht ich eigentlich wirklich programmieren kann.
+        - BachErik-Team:
+            - abbr: BET
+              href: https://github.com/BachErik-Team
+              icon: github-light.png
+              description: Irgend so ne orga
+        - SecuritySchool:
+            - abbr: S
+              href: https://github.com/SecSchool
+              icon: github-light.png
+              description: Eine Platform von unter anderem Niklas die es insich hat.
+
+    - Social:
+        - Instagram:
+            - abbr: I
+              href: https://www.instagram.com/bacherik_offical/
+              icon: instagram.png
+              description: Mein Instagram der nicht regelmäßig ist
+        - Twitter / X:
+            - abbr: X
+              href: https://twitter.com/BachErik_
+              icon: twitter.png
+              description: Meine meinung ist unwichtig
+        - Discord:
+            - abbr: DC
+              href: https://discord.gg/9K8hVWcjFW
+              icon: discord.png
+              description: Mein Community Discord
+    - Entertainment:
+        - YouTube:
+            - abbr: YT
+              href: https://youtube.com/@bacherik_live
+              icon: youtube.png
+              description: Alle paar Jahre mal Videos
+        - Twitch:
+            - abbr: T
+              href: https://twitch.tv/bacherik_live
+              icon: twitch.png
+              description: Man darf ja mal träumen ...
   services.yaml: |
-    - My First Group:
-        - My First Service:
-            href: http://localhost/
-            description: Homepage is awesome
+    # For configuration options and examples, please see:
+    # https://gethomepage.dev/latest/configs/services
 
-    - My Second Group:
-        - My Second Service:
-            href: http://localhost/
-            description: Homepage is the best
-
-    - My Third Group:
-        - My Third Service:
-            href: http://localhost/
-            description: Homepage is 😎
+    - SecSchool:
+        - GitHub:
+            href: https://github.com/SecSchool
+            icon: github-light.png
+            description: Eine Platform von unter anderem Niklas die es insich hat.
+        - Discord:
+            href: https://discord.gg/2bWxKHn8Yd
+            icon: discord.png
+            description: Der Security School discord
+        - Webseite:
+            href: https://secschool.net/
+            icon: https://avatars.githubusercontent.com/u/138791564?s=200&v=4
+            description: (noch nicht fertig)
+            ping: secschool.net
+        - Twitch:
+            href: https://twitch.tv/secscool
+            icon: twitch.png
+    - Uptime:
+        - Main server:
+            description: Mein main server erreichbar über main.bacherik.eu
+            widget:
+                type: uptimerobot
+                url: https://api.uptimerobot.com
+                key: m796718516-ca9cd9d6ec77a419849e369e
+        - Sync server:
+            description: Auf diesem server läuft diese seite. Erreichbar ist der server über sync.bacherik.eu
+            widget:
+                type: uptimerobot
+                url: https://api.uptimerobot.com
+                key: m796868779-af16b0edc81af7ebafa9f2a5
+        - bacherik.de:
+            description: Meine haupt webseite domain
+            widget:
+                type: uptimerobot
+                url: https://api.uptimerobot.com
+                key: m794087503-81ed24efc6b06dad863640ca
+    - Minecraft Servers:
+        - Eulengames:
+            description: Eulengames netzwerk
+            widget:
+                type: minecraft
+                url: udp://eulengames.net:25565
+                players: True
+                version: True
+                status: True
+        - TheJoCraft:
+            description: Das netzwerk von TheJoCraft
+            href: https://thejocraft.net
+            icon: https://avatars.githubusercontent.com/u/122056285?s=200&v=4
+            widget:
+                type: minecraft
+                url: udp://thejocraft.net:25565
+                players: True
+                version: True
+                status: True
   widgets.yaml: |
-    - kubernetes:
-        cluster:
-          show: true
-          cpu: true
-          memory: true
-          showLabel: true
-          label: "cluster"
-        nodes:
-          show: true
-          cpu: true
-          memory: true
-          showLabel: true
+    # For configuration options and examples, please see:
+    # https://gethomepage.dev/latest/configs/service-widgets
+
     - resources:
-        backend: resources
-        expanded: true
-        cpu: true
-        memory: true
-    - search:
-        provider: duckduckgo
-        target: _blank
+        cpu: false
+        memory: false
+        disk: false
+
+    - datetime:
+        # 06.05.24, 17:50:40 MESZ
+        locale: de
+        format:
+            dateStyle: short
+            timeStyle: long
+    - logo:
+        icon: https://avatars.githubusercontent.com/u/75324423?v=4
   docker.yaml: ""
