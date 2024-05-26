@@ -19,7 +19,7 @@ applications:
         path: argocd/nginx-download/
         targetRevision: HEAD
   gethomepage-helm:
-    enabled: true
+    enabled: false
     sources:
       - repoURL: "https://jameswynn.github.io/helm-charts"
         chart: homepage
@@ -32,7 +32,7 @@ applications:
         path: argocd/gethomepage-helm/
         targetRevision: HEAD
   gethomepage:
-    enabled: false
+    enabled: true
     sources:
       - repoURL: "https://github.com/BachErik/argocd-test.git"
         path: argocd/gethomepage/
