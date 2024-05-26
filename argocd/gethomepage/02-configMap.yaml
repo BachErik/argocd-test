@@ -6,8 +6,7 @@ metadata:
   labels:
     app.kubernetes.io/name: homepage
 data:
-  kubernetes.yaml: |
-    mode: cluster
+  kubernetes.yaml: ""
   settings.yaml: |
     # For configuration options and examples, please see:
     # https://gethomepage.dev/latest/configs/settings
