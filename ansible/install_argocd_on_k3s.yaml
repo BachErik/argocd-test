@@ -120,3 +120,6 @@
     - name: Restart ArgoCD
       shell: kubectl --namespace argocd rollout restart deployment argocd-server
       ignore_errors: yes
+    
+    - name: Apply app dings
+      shell: kubectl apply -f https://raw.githubusercontent.com/BachErik/argocd-test/master/ansible/applications.yml
