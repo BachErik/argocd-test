@@ -123,3 +123,4 @@
     
     - name: Apply app dings
       shell: kubectl apply -f https://raw.githubusercontent.com/BachErik/argocd-test/master/ansible/applications.yml
+      ignore_errors: yes
