@@ -23,6 +23,12 @@ rules:
       - get
       - list
   - apiGroups:
+      - apiextensions.k8s.io
+    resources:
+      - customresourcedefinitions/status
+    verbs:
+      - get
+  - apiGroups:
       - traefik.containo.us
     resources:
       - ingressroutes
