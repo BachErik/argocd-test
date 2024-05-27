@@ -4,7 +4,7 @@ metadata:
   name: apps
   namespace: argocd
   finalizers:
-    - resources-finalizer.argocd.argoproj.io
+    - argocd.resources-finalizer.bacherik.eu
 spec:
   destination:
     server: "https://kubernetes.default.svc"
