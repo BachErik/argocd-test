@@ -9,7 +9,7 @@ spec:
   tls:
   - hosts:
     - bacherik.eu
-    secretName: nginx-tls
+    secretName: nginx-download-tls
   rules:
   - host: "bacherik.eu"
     http:

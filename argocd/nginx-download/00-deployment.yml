@@ -9,14 +9,28 @@ spec:
   selector:
     matchLabels:
       app: nginx
-  replicas: 3
+  replicas: 1
   template:
     metadata:
       labels:
         app: nginx
     spec:
+      initContainers:
+      - name: content-loader
+        image: busybox
+        command: ['sh', '-c', 'wget -O- https://your-repository-url/static-files.zip | unzip -d /mnt/data']
+        volumeMounts:
+        - mountPath: "/var/www/html"
+          name: nginx-me-system-storage
       containers:
       - name: nginx
         image: nginx:latest
         ports:
         - containerPort: 80
+        volumeMounts:
+        - mountPath: "/var/www/html"
+          name: nginx-me-system-storage
+      volumes:
+      - name: nginx-me-system-storage
+        persistentVolumeClaim:
+          claimName: nginx-pvc

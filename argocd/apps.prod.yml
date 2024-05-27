@@ -13,7 +13,7 @@ applications:
         path: argocd/authentik-app/
         targetRevision: HEAD
   nginx-download:
-    enabled: false
+    enabled: true
     sources:
       - repoURL: "https://github.com/BachErik/argocd-test.git"
         path: argocd/nginx-download/
