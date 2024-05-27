@@ -6,19 +6,7 @@ metadata:
   labels:
     app.kubernetes.io/name: homepage
 data:
-  kubernetes.yaml: |
-    - kubernetes:
-        cluster:
-          show: true
-          cpu: true
-          memory: true
-          showLabel: true
-          label: "cluster"
-        nodes:
-          show: true
-          cpu: true
-          memory: true
-          showLabel: true
+  kubernetes.yaml: ""
   settings.yaml: |
     # For configuration options and examples, please see:
     # https://gethomepage.dev/latest/configs/settings
@@ -167,6 +155,19 @@ data:
     # For configuration options and examples, please see:
     # https://gethomepage.dev/latest/configs/service-widgets
 
+    - kubernetes:
+        cluster:
+          show: true
+          cpu: true
+          memory: true
+          showLabel: true
+          label: "cluster"
+        nodes:
+          show: true
+          cpu: true
+          memory: true
+          showLabel: true
+          
     - resources:
         cpu: false
         memory: false
