@@ -11,7 +11,7 @@ spec:
     - bacherik.eu
     secretName: nginx-download-tls
   rules:
-  - host: "bacherie.eu"
+  - host: "bacherik.eu"
     http:
       paths:
       - path: /
