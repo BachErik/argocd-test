@@ -24,7 +24,7 @@ applications:
       - repoURL: "https://github.com/BachErik/argocd-test.git"
         path: argocd/gethomepage/
         targetRevision: HEAD
-  Reloader:
+  reloader:
     enabled: true
     sources:
       - repoURL: "https://stakater.github.io/stakater-charts"
