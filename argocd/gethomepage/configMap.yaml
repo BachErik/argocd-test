@@ -15,7 +15,7 @@ data:
     providers:
       openweathermap: openweathermapapikey
       weatherapi: weatherapiapikey
-    title: The Home of Erik
+    title: The Home of Erik`s Test
     background:
       image: https://static-cdn.jtvnw.net/jtv_user_pictures/4d590367-c265-4d2e-ab4b-d7ddae003631-profile_banner-480.png
       blur: sm # sm, "", md, xl... see https://tailwindcss.com/docs/backdrop-blur
