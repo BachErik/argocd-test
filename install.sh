@@ -3,7 +3,7 @@
 # Paketquellen aktualisieren und System upgraden
 apt update
 apt upgrade -y
-apt install git wget gpg -y
+apt install git wget gpg jq -y
 
 # k9s installieren
 wget https://github.com/derailed/k9s/releases/download/v0.32.4/k9s_Linux_amd64.tar.gz
