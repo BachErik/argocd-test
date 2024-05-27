@@ -11,13 +11,13 @@ spec:
     - bacherik.eu
     secretName: nginx-download-tls
   rules:
-  - host: "bacherik.eu"
+  - host: "bacherie.eu"
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: nginx
+            name: nginx-service
             port:
-              number: 2244
+              number: 80
