@@ -20,4 +20,4 @@ spec:
           service:
             name: nginx-service
             port:
-              number: 2244
+              number: 3000

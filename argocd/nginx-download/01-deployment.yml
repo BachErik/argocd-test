@@ -27,7 +27,7 @@ spec:
       - name: nginx
         image: nginx:latest
         ports:
-        - containerPort: 80
+        - containerPort: 3000
         volumeMounts:
         - mountPath: "/var/www/html"
           name: nginx-me-system-storage
