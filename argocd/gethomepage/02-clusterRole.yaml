@@ -14,7 +14,7 @@ rules:
   - apiGroups: ["apiextensions.k8s.io"]
     resources: ["customresourcedefinitions", "customresourcedefinitions/status"]
     verbs: ["get", "list"]
-  - apiGroups: ["traefik.containo.us"]
+  - apiGroups: ["traefik.containo.us", "traefik.io"]
     resources: ["ingressroutes"]
     verbs: ["get", "list"]
   - apiGroups: ["metrics.k8s.io"]
