@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: nginx-ingress
-  namespace: nginx-downloader
+  namespace: nginx-download
   labels:
     app.kubernetes.io/name: nginx-downloader
   annotations:

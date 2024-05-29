@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
-  namespace: nginx-downloader
+  namespace: nginx-download
   labels:
     app.kubernetes.io/name: nginx-downloader
 spec:
