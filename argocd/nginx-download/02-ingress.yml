@@ -11,7 +11,7 @@ spec:
   tls:
   - hosts:
     - bacherik.eu
-    secretName: bacherik-eu-tls
+    secretName: gethomepage-tls
   rules:
   - host: "bacherik.eu"
     http:
