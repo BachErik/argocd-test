@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  namespace: nginx-downloader
+  labels:
+    app.kubernetes.io/name: nginx-downloader
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: nginx-downloader
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: nginx-downloader
+    spec:
+      containers:
+      - name: nginx
+        image: bacherik/port2244
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: shared-volume
+          mountPath: /usr/share/nginx/html/shared-folder
+      volumes:
+      - name: shared-volume
+        emptyDir: {}
