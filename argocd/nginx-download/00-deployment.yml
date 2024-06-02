@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: bacherik/port2244
+        image: bacherik/port2244:v1.0.0
         ports:
         - containerPort: 80
         volumeMounts:
