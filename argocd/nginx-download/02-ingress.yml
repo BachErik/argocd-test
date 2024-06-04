@@ -3,8 +3,6 @@ kind: Ingress
 metadata:
   name: nginx-ingress
   namespace: nginx-download
-  labels:
-    app.kubernetes.io/name: nginx-downloader
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt"
 spec:
