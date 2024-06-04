@@ -19,7 +19,7 @@ spec:
       - name: nginx
         image: bacherik/port2244:v1.0.0
         ports:
-        - containerPort: 2244
+        - containerPort: 80
         volumeMounts:
         - name: shared-volume
           mountPath: /usr/share/nginx/html/shared-folder
