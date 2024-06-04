@@ -8,8 +8,9 @@ metadata:
 spec:
   type: ClusterIP
   ports:
-  - port: 80
-    targetPort: 2244
-    protocol: TCP
+    - port: 80
+      targetPort: http
+      protocol: TCP
+      name: http
   selector:
     app.kubernetes.io/name: nginx-downloader

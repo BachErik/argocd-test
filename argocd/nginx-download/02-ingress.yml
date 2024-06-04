@@ -10,10 +10,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - bacherik.eu
-    secretName: bacherik-eu-tls
+    - file.bacherik.eu
+    secretName: file-bacherik-eu-tls
   rules:
-  - host: "bacherik.eu"
+  - host: "file.bacherik.eu"
     http:
       paths:
       - path: "/"
@@ -22,4 +22,4 @@ spec:
           service:
             name: nginx-service
             port:
-              number: 2244
+              number: 80
