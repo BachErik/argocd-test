@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: bacherik/port2244:v1.0.0
+        image: bacherik/filedownload:v1.0.0
         ports:
         - containerPort: 80
