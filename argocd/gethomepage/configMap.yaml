@@ -35,17 +35,17 @@ data:
     - ME-System:
         - 1.17:
             - abbr: 17
-              href: https://bacherik.eu:2244/minecraft/maps/ME-System/ME-System_1.17.zip
+              href: https://file.bacherik.eu/minecraft/maps/ME-System/ME-System_1.17.zip
               icon: minecraft.png
               description: dwnload the minecraft ME-System for Minecraft version 1.17
         - 1.18 / 1.19:
             - abbr: 18
-              href: https://bacherik.eu:2244/minecraft/maps/ME-System/ME-System_1.18-1.19.zip
+              href: https://file.bacherik.eu/minecraft/maps/ME-System/ME-System_1.18-1.19.zip
               icon: minecraft.png
               description: download the minecraft ME-System for Minecraft versions 1.18 and 1.19
         - 1.20.x:
             - abbr: 20.x
-              href: https://bacherik.eu:2244/minecraft/maps/ME-System/ME-System_1.20.x.zip
+              href: https://file.bacherik.eu/minecraft/maps/ME-System/ME-System_1.20.x.zip
               icon: minecraft.png
               description: download the minecraft ME-System for Minecraft version 1.20.x
 
