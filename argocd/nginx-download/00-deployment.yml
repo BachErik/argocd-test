@@ -1,28 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
-  namespace: nginx-download
+  name: nginx
+  namespace: nginx-test
   labels:
-    app: nginx-service
+    app: nginx
 spec:
-  replicas: 1
   selector:
     matchLabels:
-      app: nginx-service
+      app: nginx
+  replicas: 3
   template:
     metadata:
       labels:
-        app: nginx-service
+        app: nginx
     spec:
       containers:
       - name: nginx
         image: bacherik/port2244:v1.0.0
         ports:
         - containerPort: 80
-        volumeMounts:
-        - name: shared-volume
-          mountPath: /usr/share/nginx/html/shared-folder
-      volumes:
-      - name: shared-volume
-        emptyDir: {}
