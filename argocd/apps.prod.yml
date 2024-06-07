@@ -32,3 +32,9 @@ applications:
         targetRevision: 1.0.97
         helm:
           releaseName: reloader
+  endeavouros:
+    enabled: true
+    sources:
+      - repoURL: "https://github.com/BachErik/argocd-test.git"
+        path: argocd/endeavouros/
+        targetRevision: HEAD
