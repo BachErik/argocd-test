@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: qemu
+  labels:
+    name: qemu
+spec:
+  terminationGracePeriodSeconds: 120 # the Kubernetes default is 30 seconds and it may be not enough
+  containers:
+    - name: qemu
+      image: qemux/qemu-docker
+      ports:
+        - containerPort: 8006
+          protocol: TCP
+      resources:
+        limits:
+          devices.kubevirt.io/kvm: 1
+      securityContext:
+        privileged: true
+      env:
+        - name: BOOT
+          value: "https://de.freedif.org/EndeavourOS/iso/EndeavourOS_Gemini-2024.04.20.iso"
+        - name: RAM_SIZE
+          value: 23G
+        - name: CPU_CORES
+          value: "5"
+        - name: DISK_SIZE
+          value: "30G"
+      volumeMounts:
+        - mountPath: /storage
+          name: storage
+  volumes:
+    - name: storage
+      persistentVolumeClaim:
+        claimName: qemu-pvc
