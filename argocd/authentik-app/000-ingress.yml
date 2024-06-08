@@ -8,10 +8,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - authentik.bacherik.eu
+    - authentik.bacherik.de
     secretName: authentik-tls
   rules:
-  - host: "authentik.bacherik.eu"
+  - host: "authentik.bacherik.de"
     http:
       paths:
       - path: /

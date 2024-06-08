@@ -14,23 +14,10 @@ metadata:
     cert-manager.io/cluster-issuer: "letsencrypt"
 spec:
   tls:
-    - secretName: bacherik-eu-tls
-      hosts:
-        - bacherik.eu
     - secretName: bacherik-de-tls
       hosts:
         - bacherik.de
   rules:
-    - host: "bacherik.eu"
-      http:
-        paths:
-          - path: "/"
-            pathType: Prefix
-            backend:
-              service:
-                name: homepage
-                port:
-                  number: 3000
     - host: "bacherik.de"
       http:
         paths:

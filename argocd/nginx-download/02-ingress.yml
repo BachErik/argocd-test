@@ -10,10 +10,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - file.bacherik.eu
+    - file.bacherik.de
     secretName: nginx-tls
   rules:
-  - host: "file.bacherik.eu"
+  - host: "file.bacherik.de"
     http:
       paths:
       - path: /
