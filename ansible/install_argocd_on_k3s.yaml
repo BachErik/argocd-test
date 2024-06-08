@@ -70,10 +70,10 @@
         spec:
           tls:
           - hosts:
-            - argocd.bacherik.eu
+            - argocd.bacherik.de
             secretName: argocd-tls
           rules:
-          - host: argocd.bacherik.eu
+          - host: argocd.bacherik.de
             http:
               paths:
               - path: /
@@ -94,7 +94,7 @@
       replace:
         path: /tmp/argocd-cm.yml
         regexp: 'example.com'
-        replace: 'argocd.bacherik.eu'
+        replace: 'argocd.bacherik.de'
       ignore_errors: yes
 
     - name: Apply the modified argocd-cm configmap

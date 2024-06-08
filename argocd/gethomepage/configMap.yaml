@@ -116,13 +116,13 @@ data:
             icon: twitch.png
     - Uptime:
         - Main server:
-            description: Mein main server erreichbar über main.bacherik.eu
+            description: Mein main server erreichbar über main.bacherik.de
             widget:
                 type: uptimerobot
                 url: https://api.uptimerobot.com
                 key: m796718516-ca9cd9d6ec77a419849e369e
         - Sync server:
-            description: Auf diesem server läuft diese seite. Erreichbar ist der server über sync.bacherik.eu
+            description: Auf diesem server läuft diese seite. Erreichbar ist der server über sync.bacherik.de
             widget:
                 type: uptimerobot
                 url: https://api.uptimerobot.com
