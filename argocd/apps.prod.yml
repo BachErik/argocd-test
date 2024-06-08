@@ -33,7 +33,7 @@ applications:
         helm:
           releaseName: reloader
   endeavouros:
-    enabled: false
+    enabled: true
     sources:
       - repoURL: "https://github.com/BachErik/argocd-test.git"
         path: argocd/endeavouros/
