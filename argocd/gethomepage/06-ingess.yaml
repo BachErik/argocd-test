@@ -17,9 +17,9 @@ spec:
     - secretName: bacherik-eu-tls
       hosts:
         - bacherik.eu
-    #- secretName: bacherik-de-tls
-      #hosts:
-        #- bacherik.de
+    - secretName: bacherik-de-tls
+      hosts:
+        - bacherik.de
   rules:
     - host: "bacherik.eu"
       http:
