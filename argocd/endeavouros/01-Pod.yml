@@ -12,7 +12,6 @@ spec:
       ports:
         - containerPort: 8006
           protocol: TCP
-          3022:22
       securityContext:
         privileged: true
       env:
