@@ -14,10 +14,12 @@ metadata:
     cert-manager.io/cluster-issuer: "letsencrypt"
 spec:
   tls:
-  - hosts:
-    - bacherik.eu
-    - bacherik.de
-    secretName: bacherik-domain-tls
+    - secretName: bacherik-eu-tls
+      hosts:
+        - bacherik.eu
+    - secretName: bacherik-de-tls
+      hosts:
+        - bacherik.de
   rules:
     - host: "bacherik.eu"
       http:
