@@ -17,8 +17,21 @@ spec:
   - hosts:
     - bacherik.eu
     secretName: bacherik-eu-tls
+  - hosts:
+    - bacherik.de
+    secretName: bacherik-de-tls
   rules:
     - host: "bacherik.eu"
+      http:
+        paths:
+          - path: "/"
+            pathType: Prefix
+            backend:
+              service:
+                name: homepage
+                port:
+                  number: 3000
+    - host: "bacherik.de"
       http:
         paths:
           - path: "/"
