@@ -10,4 +10,5 @@ ufw deny 10251/tcp
 ufw deny 10252/tcp
 ufw allow 8285/udp
 ufw allow 8472/udp
-ufw enable -y
+ufw enable
+y
