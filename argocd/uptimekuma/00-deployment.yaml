@@ -9,11 +9,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: uptimekuma
+      app.kubernetes.io/name: uptimekuma
   template:
     metadata:
       labels:
-        app: uptimekuma
+        app.kubernetes.io/name: uptimekuma
     spec:
       containers:
       - name: uptime-kuma
@@ -27,5 +27,3 @@ spec:
       - name: data
         persistentVolumeClaim:
           claimName: uptime-kuma-pvc
-  selector:
-    app.kubernetes.io/name: uptimekuma
