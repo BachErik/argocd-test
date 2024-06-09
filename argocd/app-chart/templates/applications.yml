@@ -24,6 +24,6 @@ spec:
       - CreateNamespace=true
       - PruneLast=true
       - PrunePropagationPolicy=foreground
-      - ApplyStrategy=server-side
+      - ServerSideApply=true
 {{- end }}
 {{- end }}
