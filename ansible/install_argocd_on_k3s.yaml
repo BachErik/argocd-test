@@ -135,4 +135,4 @@
         msg: >
           "If you want to add a node do the following steps\n
           1. run the following cmd: 'curl -sfL https://get.k3s.io | K3S_URL=https://{{ ansible_default_ipv4.address }}:6443 K3S_TOKEN={{ (node_token['content'] | b64decode).rstrip('\n') }} sh -'\n
-          2. and run the following cmd on this and all node servers. 'curl https://raw.githubusercontent.com/BachErik/argocd-test/master/ansible/export_ports.sh | bash'"
+          2. and run the following cmd on this and all node servers. 'wget https://raw.githubusercontent.com/BachErik/argocd-test/master/ansible/export_ports.sh && chmod 777 export_ports.sh && ./export_ports.sh && rm export_ports.sh'"
