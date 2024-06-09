@@ -24,6 +24,12 @@ applications:
       - repoURL: "https://github.com/BachErik/argocd-test.git"
         path: argocd/gethomepage/
         targetRevision: HEAD
+  uptimekuma:
+    enabled: true
+    sources:
+      - repoURL: "https://github.com/BachErik/argocd-test.git"
+        path: argocd/uptimekuma/
+        targetRevision: HEAD
   reloader:
     enabled: true
     sources:
@@ -39,7 +45,7 @@ applications:
         path: argocd/endeavouros/
         targetRevision: HEAD
   agones:
-    enabled: true
+    enabled: false
     sources:
       - repoURL: "https://agones.dev/chart/stable"
         chart: agones
