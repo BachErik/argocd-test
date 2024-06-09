@@ -38,3 +38,13 @@ applications:
       - repoURL: "https://github.com/BachErik/argocd-test.git"
         path: argocd/endeavouros/
         targetRevision: HEAD
+  agones:
+    enabled: true
+    sources:
+      - repoURL: "https://agones.dev/chart/stable"
+        chart: agones
+        targetRevision: 1.41.0
+        helm:
+          releaseName: agones
+          valueFiles:
+            - https://raw.githubusercontent.com/BachErik/argocd-test/master/argocd/agones/values.yml

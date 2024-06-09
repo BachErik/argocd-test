@@ -1,0 +1,3 @@
+gameservers.namespaces: shulker-system
+agones.allocator.install: true
+agones.allocator.service.serviceType: ClusterIP
