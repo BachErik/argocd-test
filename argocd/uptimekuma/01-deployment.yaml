@@ -6,10 +6,10 @@ metadata:
   labels:
     app.kubernetes.io/name: uptimekuma
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app.kubernetes.io/name: uptimekuma
+  replicas: 1
   template:
     metadata:
       labels:
