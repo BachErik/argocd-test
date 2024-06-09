@@ -165,7 +165,7 @@ data:
             icon: https://hypixel.net/styles/hypixel-v2/images/hypixel-512px.png
             widget:
                 type: minecraft
-                url: udp://hypexel.net:25565
+                url: udp://mc.hypixel.net:25565
                 players: True
                 version: True
                 status: True
