@@ -26,6 +26,7 @@ data:
     favicon: https://avatars.githubusercontent.com/u/75324423?v=4
     theme: dark # or light
     color: slate
+    headerStyle: boxed
   custom.css: ""
   custom.js: ""
   bookmarks.yaml: |
@@ -121,18 +122,21 @@ data:
                 type: uptimerobot
                 url: https://api.uptimerobot.com
                 key: m796718516-ca9cd9d6ec77a419849e369e
+                hideErrors: true
         - Sync server:
             description: Auf diesem server läuft diese seite. Erreichbar ist der server über sync.bacherik.de
             widget:
                 type: uptimerobot
                 url: https://api.uptimerobot.com
                 key: m796868779-af16b0edc81af7ebafa9f2a5
+                hideErrors: true
         - bacherik.de:
             description: Meine haupt webseite domain
             widget:
                 type: uptimerobot
                 url: https://api.uptimerobot.com
                 key: m794087503-81ed24efc6b06dad863640ca
+                hideErrors: true
     - Minecraft Servers:
         - Eulengames:
             description: Eulengames netzwerk
