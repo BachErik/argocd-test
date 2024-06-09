@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: uptime-kuma
-  namespace: uptime-kuma
+  name: uptimekuma
+  namespace: uptimekuma
   labels:
-    app.kubernetes.io/name: uptime-kuma
+    app.kubernetes.io/name: uptimekuma
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: uptime-kuma
+      app: uptimekuma
   template:
     metadata:
       labels:
-        app: uptime-kuma
+        app: uptimekuma
     spec:
       containers:
       - name: uptime-kuma
@@ -28,4 +28,4 @@ spec:
         persistentVolumeClaim:
           claimName: uptime-kuma-pvc
   selector:
-    app.kubernetes.io/name: uptime-kuma
+    app.kubernetes.io/name: uptimekuma
