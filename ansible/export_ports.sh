@@ -1,3 +1,4 @@
+# !/bin/bash
 apt update
 apt upgrade
 apt install ufw -y
@@ -11,4 +12,3 @@ ufw deny 10252/tcp
 ufw allow 8285/udp
 ufw allow 8472/udp
 ufw enable
-y
