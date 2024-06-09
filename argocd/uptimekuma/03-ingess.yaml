@@ -11,9 +11,9 @@ spec:
   tls:
     - secretName: uptime-kuma-bacherik-de-tls
       hosts:
-        - sync.bacherik.de
+        - status.bacherik.de
   rules:
-    - host: "sync.bacherik.de"
+    - host: "status.bacherik.de"
       http:
         paths:
           - path: "/"
