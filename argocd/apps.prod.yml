@@ -48,3 +48,6 @@ applications:
           releaseName: agones
           valueFiles:
             - https://raw.githubusercontent.com/BachErik/argocd-test/master/argocd/agones/values.yml
+    syncPolicy:
+      syncOptions:
+        - ApplyStrategy=server-side
