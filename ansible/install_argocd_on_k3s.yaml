@@ -128,10 +128,10 @@
     - name: Lade node-token
       ansible.builtin.slurp:
         src: /var/lib/rancher/k3s/server/node-token
-      register: node-token
+      register: node_token
 
     - name: Zeige Dateiinhalt
       debug:
         msg: "If you want to add a node do the following steps\n
-        1. run the following cmd: 'curl -sfL https://get.k3s.io | K3S_URL=https://{{ ansible_default_ipv4.address }}:6443 K3S_TOKEN={{ node-token['content'] | b64decode }} sh -'
-        2. expose the port 6443/tcp on this and the node servers"
+            1. run the following cmd: 'curl -sfL https://get.k3s.io | K3S_URL=https://{{ ansible_default_ipv4.address }}:6443 K3S_TOKEN={{ node_token['content'] | b64decode }} sh -'
+            2. expose the port 6443/tcp on this and the node servers"
