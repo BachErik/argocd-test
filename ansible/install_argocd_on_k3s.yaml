@@ -132,6 +132,7 @@
 
     - name: Zeige Dateiinhalt
       debug:
-        msg: "If you want to add a node do the following steps\n
-            1. run the following cmd: 'curl -sfL https://get.k3s.io | K3S_URL=https://{{ ansible_default_ipv4.address }}:6443 K3S_TOKEN={{ node_token['content'] | b64decode }} sh -'
-            2. expose the port 6443/tcp on this and the node servers"
+        msg: >
+          "If you want to add a node do the following steps\n
+          1. run the following cmd: 'curl -sfL https://get.k3s.io | K3S_URL=https://{{ ansible_default_ipv4.address }}:6443 K3S_TOKEN={{ (node_token['content'] | b64decode).rstrip('\n') }} sh -'\n
+          2. expose the port 6443/tcp on this and the node servers"
