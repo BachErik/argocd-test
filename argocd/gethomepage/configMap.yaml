@@ -116,6 +116,9 @@ data:
             href: https://twitch.tv/secscool
             icon: twitch.png
     - Uptime:
+        - Status page:
+            href: https://status.bacherik.de
+            icon: https://status.bacherik.de/upload/logo1.png
         - Main server:
             description: Mein main server erreichbar über main.bacherik.de
             widget:
@@ -153,6 +156,16 @@ data:
             widget:
                 type: minecraft
                 url: udp://thejocraft.net:25565
+                players: True
+                version: True
+                status: True
+        - Hypixel:
+            description: Jeder kennt es
+            href: https://hypixel.net
+            icon: https://hypixel.net/styles/hypixel-v2/images/hypixel-512px.png
+            widget:
+                type: minecraft
+                url: udp://hypexel.net:25565
                 players: True
                 version: True
                 status: True
