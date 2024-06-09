@@ -12,6 +12,11 @@ chmod +x k9s
 mv k9s /bin/
 rm LICENSE README.md k9s_Linux_amd64.tar.gz
 
+# install docker
+curl -fsSL https://get.docker.com -o install-docker.sh
+sudo sh install-docker.sh
+rm install-docker.sh
+
 # k3s installieren
 curl -sfL https://get.k3s.io | sh -
 
