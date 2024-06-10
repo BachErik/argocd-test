@@ -25,4 +25,3 @@ spec:
                 name: uptimekuma
                 port:
                   number: 3001
-                  
