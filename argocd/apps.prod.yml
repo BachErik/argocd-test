@@ -8,7 +8,11 @@ applications:
         helm:
           releaseName: authentik
           valueFiles:
-            - https://raw.githubusercontent.com/BachErik/argocd-test/master/argocd/authentik-app/authentik-values.yml
+            - $values/argocd/authentik-app/authentik-values.yml
+            #- https://raw.githubusercontent.com/BachErik/argocd-test/master/argocd/authentik-app/authentik-values.yml
+      - repoURL: "https://github.com/BachErik/argocd-test.git"
+        targetRevision: HEAD
+        ref: values
       #- repoURL: "https://github.com/BachErik/argocd-test.git"
         #path: argocd/authentik-app/
         #targetRevision: HEAD
