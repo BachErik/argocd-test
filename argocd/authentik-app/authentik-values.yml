@@ -5,7 +5,7 @@ authentik:
     error_reporting:
         enabled: false
     postgresql:
-        password: "<authentik-app:secret:authentik-app:postgresql.passwor>"
+        password: "<authentik-app:secret:authentik-app:postgresql.password>"
 
 server:
     ingress:
