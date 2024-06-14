@@ -1,9 +1,9 @@
 applications:
   authentik:
-    enabled: true
+    enabled: false
     sources:
-      - chart: authentik
-        repoURL: "https://charts.goauthentik.io"
+      - repoURL: "https://charts.goauthentik.io"
+        chart: authentik
         targetRevision: 2024.4.2
         #helm:
           #releaseName: authentik
