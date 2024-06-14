@@ -7,8 +7,8 @@ applications:
         targetRevision: 2024.4.2
         helm:
           releaseName: authentik
-          valueFiles:
-            - $values/argocd/authentik-app/authentik-values.yml
+          #valueFiles:
+            #- $values/argocd/authentik-app/authentik-values.yml
             #- https://raw.githubusercontent.com/BachErik/argocd-test/master/argocd/authentik-app/authentik-values.yml
       - repoURL: "https://github.com/BachErik/argocd-test.git"
         targetRevision: HEAD
