@@ -9,7 +9,7 @@ applications:
           name: kph-plugin-helm
           env:
             - name: "HELM_ARGS"
-              value: ["-f https://raw.githubusercontent.com/BachErik/argocd-test/master/argocd/authentik-app/default-values.yml -f https://raw.githubusercontent.com/BachErik/argocd-test/master/argocd/authentik-app/custom-values.yml"]
+              value: ["-f https://raw.githubusercontent.com/BachErik/argocd-test/master/argocd/authentik-app/values.yml"]
       - repoURL: "https://github.com/BachErik/argocd-test.git"
         path: argocd/authentik-app/
         targetRevision: HEAD
