@@ -4,10 +4,8 @@ applications:
     sources:
       - chart: authentik
         repoURL: "https://charts.goauthentik.io"
-        #chart: authentik
         targetRevision: 2024.4.2
         plugin:
-          #name: "kph-plugin-helm"
           env:
             - name: "VALUES"
               value: "https://raw.githubusercontent.com/BachErik/argocd-test/master/argocd/authentik-app/authentik-values.yml"
@@ -20,9 +18,9 @@ applications:
         #repoURL: "https://github.com/BachErik/argocd-test.git"
         #targetRevision: HEAD
         #ref: values
-      #- repoURL: "https://github.com/BachErik/argocd-test.git"
-        #path: argocd/authentik-app/
-        #targetRevision: HEAD
+      - repoURL: "https://github.com/BachErik/argocd-test.git"
+        path: argocd/authentik-app/
+        targetRevision: HEAD
   nginx-download:
     enabled: true
     sources:
