@@ -1,6 +1,6 @@
 applications:
   authentik:
-    enabled: false
+    enabled: true
     sources:
       - chart: authentik
         repoURL: "https://charts.goauthentik.io"
