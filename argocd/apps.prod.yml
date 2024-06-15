@@ -7,7 +7,7 @@ applications:
         #chart: authentik
         targetRevision: 2024.4.2
         plugin:
-          #name: "kph-plugin-helm"
+          name: "kph-plugin-helm"
           env:
             - name: "VALUES"
               value: "https://raw.githubusercontent.com/BachErik/argocd-test/master/argocd/authentik-app/authentik-values.yml"
