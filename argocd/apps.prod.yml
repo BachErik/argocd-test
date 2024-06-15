@@ -10,15 +10,6 @@ applications:
           env:
             - name: "VALUES"
               value: "https://raw.githubusercontent.com/BachErik/argocd-test/master/argocd/authentik-app/authentik-values.yml"
-        #helm:
-          #releaseName: authentik
-          #valueFiles:
-            #- $values/argocd/authentik-app/authentik-values.yml
-            #- https://raw.githubusercontent.com/BachErik/argocd-test/master/argocd/authentik-app/authentik-values.yml
-      #- ref: values
-        #repoURL: "https://github.com/BachErik/argocd-test.git"
-        #targetRevision: HEAD
-        #ref: values
       - repoURL: "https://github.com/BachErik/argocd-test.git"
         path: argocd/authentik-app/
         targetRevision: HEAD
