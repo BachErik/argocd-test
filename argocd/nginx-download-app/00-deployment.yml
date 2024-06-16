@@ -3,15 +3,13 @@ kind: Deployment
 metadata:
   name: nginx
   namespace: nginx-download
-  #annotations:
-    #configmap.reloader.stakater.com/reload: "nginx-download"
   labels:
     app: nginx
 spec:
   selector:
     matchLabels:
       app: nginx
-  replicas: <nginx-download:configmap:nginx-download:nginx_download_replicas>
+  replicas: 3
   template:
     metadata:
       labels:
