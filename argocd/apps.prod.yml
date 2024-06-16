@@ -8,6 +8,15 @@ applications:
         values: true
       - url: "https://github.com/BachErik/argocd-test.git"
         revision: HEAD
+  oneuptime:
+    enabled: true
+    sources:
+      - chart: oneuptime
+        url: "https://helm-chart.oneuptime.com"
+        version: 7.0.2550
+        values: true
+      - url: "https://github.com/BachErik/argocd-test.git"
+        revision: HEAD
   nginx-download:
     enabled: true
     sources:
