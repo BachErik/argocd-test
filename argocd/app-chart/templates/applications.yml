@@ -1,4 +1,4 @@
-{{- range $key,$val := .Values.applications }}
+{{- range $key, $val := .Values.applications }}
 {{- if $val.enabled }}
 ---
 apiVersion: argoproj.io/v1alpha1
@@ -13,12 +13,30 @@ spec:
     server: "https://kubernetes.default.svc"
     namespace: {{ $key }}
   sources:
-{{ toYaml $val.sources | indent 4 }}
+    {{- range $source := $val.sources }}
+    {{- if $source.chart }}
+    - chart: {{ $source.chart }}
+      targetRevision: {{ $source.version }}
+      {{- if $source.values }}
+      plugin:
+        name: kph-plugin-helm
+        env:
+          - name: "HELM_ARGS"
+            value: "-f https://raw.githubusercontent.com/BachErik/argocd-test/master/argocd/{{ $key }}-app/values.yml"
+      {{- end }}
+    {{- else }}
+    - path: argocd/{{ $key }}-app/
+      targetRevision: {{ $source.revision }}
+    {{- end }}
+      repoURL: {{ $source.url }}
+    {{- end }}
+#{{ toYaml $val.sources | indent 4 }}
   project: default
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
+      allowEmpty: false
     syncOptions:
       - Validate=true
       - CreateNamespace=true

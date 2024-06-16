@@ -3,55 +3,41 @@ applications:
     enabled: true
     sources:
       - chart: authentik
-        repoURL: "https://charts.goauthentik.io"
-        targetRevision: 2024.4.2
-        plugin:
-          name: kph-plugin-helm
-          env:
-            - name: "HELM_ARGS"
-              value: "-f https://raw.githubusercontent.com/BachErik/argocd-test/master/argocd/authentik-app/values.yml"
-      - repoURL: "https://github.com/BachErik/argocd-test.git"
-        path: argocd/authentik-app/
-        targetRevision: HEAD
+        url: "https://charts.goauthentik.io"
+        version: 2024.4.2
+        values: true
+      - url: "https://github.com/BachErik/argocd-test.git"
+        revision: HEAD
   nginx-download:
     enabled: true
     sources:
-      - repoURL: "https://github.com/BachErik/argocd-test.git"
-        path: argocd/nginx-download/
-        targetRevision: HEAD
+      - url: "https://github.com/BachErik/argocd-test.git"
+        revision: HEAD
   gethomepage:
     enabled: true
     sources:
-      - repoURL: "https://github.com/BachErik/argocd-test.git"
-        path: argocd/gethomepage/
-        targetRevision: HEAD
+      - url: "https://github.com/BachErik/argocd-test.git"
+        revision: HEAD
   uptimekuma:
     enabled: true
     sources:
-      - repoURL: "https://github.com/BachErik/argocd-test.git"
-        path: argocd/uptimekuma/
-        targetRevision: HEAD
+      - url: "https://github.com/BachErik/argocd-test.git"
+        revision: HEAD
   reloader:
     enabled: true
     sources:
-      - repoURL: "https://stakater.github.io/stakater-charts"
-        chart: reloader
-        targetRevision: 1.0.97
-        helm:
-          releaseName: reloader
+      - chart: reloader
+        url: "https://stakater.github.io/stakater-charts"
+        version: 1.0.97
   endeavouros:
     enabled: false
     sources:
-      - repoURL: "https://github.com/BachErik/argocd-test.git"
-        path: argocd/endeavouros/
-        targetRevision: HEAD
+      - url: "https://github.com/BachErik/argocd-test.git"
+        revision: HEAD
   agones:
     enabled: false
     sources:
-      - repoURL: "https://agones.dev/chart/stable"
-        chart: agones
-        targetRevision: 1.41.0
-        helm:
-          releaseName: agones
-          valueFiles:
-            - https://raw.githubusercontent.com/BachErik/argocd-test/master/argocd/agones/values.yml
+      - chart: agones
+        url: "https://agones.dev/chart/stable"
+        version: 1.41.0
+        values: true
