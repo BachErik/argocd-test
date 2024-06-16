@@ -6,6 +6,8 @@ kind: Application
 metadata:
   name: {{ $key }}-app
   namespace: argocd
+  annotations:
+    configmap.reloader.stakater.com/reload: "nginx-download"
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
