@@ -1,3 +1,6 @@
-oneuptimeIngress.enabled: false
+oneuptimeIngress.enabled: true
 nginx.service.type: ClusterIP
+oneuptimeIngress.className: traefik
+oneuptimeIngress.hosts:
+  - status-test.bacherik.de
 httpProtocol: http
