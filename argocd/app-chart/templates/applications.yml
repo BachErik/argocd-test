@@ -16,7 +16,6 @@ spec:
     {{- range $source := $val.sources }}
     {{- if $source.chart }}
     - chart: {{ $source.chart }}
-      repoURL: {{ $source.url }}
       targetRevision: {{ $source.version }}
       {{- if $source.values }}
       plugin:
@@ -27,11 +26,10 @@ spec:
       {{- end }}
     {{- else }}
     - path: argocd/{{ $key }}-app/
-      repoURL: {{ $source.url }}
       targetRevision: {{ $source.revision }}
     {{- end }}
+      repoURL: {{ $source.url }}
     {{- end }}
-#{{ toYaml $val.sources | indent 4 }}
   project: default
   syncPolicy:
     automated:
