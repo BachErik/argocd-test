@@ -9,7 +9,7 @@ applications:
       - url: "https://github.com/BachErik/argocd-test.git"
         revision: HEAD
   oneuptime:
-    enabled: false
+    enabled: true
     sources:
       - chart: oneuptime
         url: "https://helm-chart.oneuptime.com"
