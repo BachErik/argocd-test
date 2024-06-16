@@ -1,3 +1,3 @@
 oneuptimeIngress.enabled: false
-
+nginx.service.type: ClusterIP
 httpProtocol: http
