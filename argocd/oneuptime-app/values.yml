@@ -3,4 +3,6 @@ nginx.service.type: ClusterIP
 oneuptimeIngress.className: traefik
 oneuptimeIngress.hosts:
   - status-test.bacherik.de
+port.nginxHttp: 8080
+port.nginxHttps: 4433
 httpProtocol: http
