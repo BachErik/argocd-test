@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: haste-server
+  namespace: haste-server
+  labels:
+    app: haste-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: haste-server
+  template:
+    metadata:
+      labels:
+        app: haste-server
+    spec:
+      containers:
+      - name: haste-server
+        image: bacherik/haste-server:latest
+        ports:
+        - containerPort: 7777
+        env:
+        - name: STORAGE_TYPE
+          value: redis
+        - name: STORAGE_HOST
+          value: haste-redis
+        - name: STORAGE_PORT
+          value: "6379"
+        - name: PORT
+          value: "7777"
+        volumeMounts:
+        - name: haste-data
+          mountPath: /data
+      volumes:
+      - name: haste-data
+        persistentVolumeClaim:
+          claimName: haste-data-pvc

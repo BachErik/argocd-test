@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: haste-server
+  namespace: haste-server
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt"
+spec:
+  tls:
+  - hosts:
+    - haste.bacherik.de
+    secretName: haste-server-tls
+  rules:
+  - host: "haste.bacherik.de"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: haste-server
+            port:
+              number: 80

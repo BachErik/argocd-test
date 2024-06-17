@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: haste-redis
+  namespace: haste-server
+  labels:
+    app: haste-redis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: haste-redis
+  template:
+    metadata:
+      labels:
+        app: haste-redis
+    spec:
+      containers:
+      - name: redis
+        image: redis:latest
+        ports:
+        - containerPort: 6379
+        volumeMounts:
+        - name: redis-storage
+          mountPath: /data
+      volumes:
+      - name: redis-storage
+        persistentVolumeClaim:
+          claimName: redis-pvc
