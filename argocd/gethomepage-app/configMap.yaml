@@ -83,6 +83,11 @@ data:
               href: https://discord.gg/9K8hVWcjFW
               icon: discord.png
               description: Mein Community Discord
+        - Mastodon:
+            - abbr: M
+              href: <a rel="me" href="https://mastodon.social/@BachErik">Mastodon</a>
+              icon: mastodon.png
+              description: Falls Twitter austirbt
     - Entertainment:
         - YouTube:
             - abbr: YT
