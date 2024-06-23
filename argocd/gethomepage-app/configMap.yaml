@@ -28,7 +28,15 @@ data:
     color: slate
     headerStyle: clean
   custom.css: ""
-  custom.js: ""
+  custom.js: |
+    document.addEventListener('DOMContentLoaded', function() {
+      var link = document.createElement('a');
+      link.setAttribute('rel', 'me');
+      link.setAttribute('href', 'https://mastodon.social/@BachErik');
+      link.textContent = 'Mastodon';
+      link.style.display = 'none'; // Macht den Link unsichtbar
+      document.body.appendChild(link);
+    });
   bookmarks.yaml: |
     # For configuration options and examples, please see:
     # https://gethomepage.dev/latest/configs/bookmarks
@@ -85,7 +93,7 @@ data:
               description: Mein Community Discord
         - Mastodon:
             - abbr: M
-              href: <a rel="me" href="https://mastodon.social/@BachErik">Mastodon</a>
+              href: https://mastodon.social/@BachErik
               icon: mastodon.png
               description: Falls Twitter austirbt
     - Entertainment:
