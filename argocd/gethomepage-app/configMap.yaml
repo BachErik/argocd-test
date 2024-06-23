@@ -29,14 +29,21 @@ data:
     headerStyle: clean
   custom.css: ""
   custom.js: |
-    document.addEventListener("DOMContentLoaded", function() {
-      console.log("Custom JS loaded!");
-      try {
-        // Ihr benutzerdefiniertes JavaScript hier
-      } catch (error) {
-        console.error("Error in custom JS: ", error);
-      }
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log("Custom JS is loaded");
+    
+      var bookmarks = document.querySelectorAll('li.bookmark[data-name="Mastodon"]');
+      
+      bookmarks.forEach(function(bookmark) {
+        var link = bookmark.querySelector('a');
+        
+        if (link) {
+          link.setAttribute('rel', 'me');
+          console.log("rel='me' set for", link.href);
+        }
+      });
     });
+
 
   bookmarks.yaml: |
     # For configuration options and examples, please see:
