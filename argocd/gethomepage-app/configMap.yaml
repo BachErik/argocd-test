@@ -29,21 +29,13 @@ data:
     headerStyle: clean
   custom.css: ""
   custom.js: |
-    document.addEventListener('DOMContentLoaded', function() {
-      // Alle li-Elemente mit der Klasse "bookmark" und dem data-name "Mastodon" auswählen
-      var bookmarks = document.querySelectorAll('li.bookmark[data-name="Mastodon"]');
-      
-      // Über die ausgewählten Elemente iterieren
-      bookmarks.forEach(function(bookmark) {
-        // Den a-Tag innerhalb des li-Elements finden
-        var link = bookmark.querySelector('a');
-        
-        // Sicherstellen, dass der a-Tag existiert
-        if (link) {
-          // Das rel-Attribut auf "me" setzen
-          link.setAttribute('rel', 'me');
-        }
-      });
+    document.addEventListener("DOMContentLoaded", function() {
+      console.log("Custom JS loaded!");
+      try {
+        // Ihr benutzerdefiniertes JavaScript hier
+      } catch (error) {
+        console.error("Error in custom JS: ", error);
+      }
     });
 
   bookmarks.yaml: |
