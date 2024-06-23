@@ -30,13 +30,22 @@ data:
   custom.css: ""
   custom.js: |
     document.addEventListener('DOMContentLoaded', function() {
-      var link = document.createElement('a');
-      link.setAttribute('rel', 'me');
-      link.setAttribute('href', 'https://mastodon.social/@BachErik');
-      link.textContent = 'Mastodon';
-      link.style.display = 'none'; // Macht den Link unsichtbar
-      document.body.appendChild(link);
+      // Alle li-Elemente mit der Klasse "bookmark" und dem data-name "Mastodon" auswählen
+      var bookmarks = document.querySelectorAll('li.bookmark[data-name="Mastodon"]');
+      
+      // Über die ausgewählten Elemente iterieren
+      bookmarks.forEach(function(bookmark) {
+        // Den a-Tag innerhalb des li-Elements finden
+        var link = bookmark.querySelector('a');
+        
+        // Sicherstellen, dass der a-Tag existiert
+        if (link) {
+          // Das rel-Attribut auf "me" setzen
+          link.setAttribute('rel', 'me');
+        }
+      });
     });
+
   bookmarks.yaml: |
     # For configuration options and examples, please see:
     # https://gethomepage.dev/latest/configs/bookmarks
