@@ -6,8 +6,11 @@ kind: Application
 metadata:
   name: {{ $key }}-app
   namespace: argocd
+  annotations:
+    argocd.argoproj.io/compare-options: ServerSideDiff=true,IncludeMutationWebhook=true
   finalizers:
     - resources-finalizer.argocd.argoproj.io
+    - kph/app-cleanup
 spec:
   destination:
     server: "https://kubernetes.default.svc"
