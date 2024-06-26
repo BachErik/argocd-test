@@ -9,7 +9,7 @@ metadata:
   annotations:
     argocd.argoproj.io/compare-options: ServerSideDiff=true,IncludeMutationWebhook=true
   finalizers:
-    - resources-finalizer.argocd.argoproj.ioa
+    - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     server: "https://kubernetes.default.svc"
