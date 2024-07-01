@@ -20,6 +20,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: nginx
+            name: musikplayer
             port:
               number: 80
