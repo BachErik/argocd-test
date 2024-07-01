@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: musikplayer
+  namespace: musikplayer
+  labels:
+    app: musikplayer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: musikplayer
+  template:
+    metadata:
+      labels:
+        app: musikplayer
+    spec:
+      containers:
+      - name: musikplayer
+        image: bacherik/musikplayer:latest
+        ports:
+        - containerPort: 5000
+        volumeMounts:
+        - mountPath: /app/uploads
+          name: upload-volume
+      volumes:
+      - name: upload-volume
+        emptyDir: {}

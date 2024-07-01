@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: musikplayer
+  namespace: musikplayer
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt"
+    kubernetes.io/ingress.class: traefik
+    ingress.kubernetes.io/whitelist-source-range: "192.168.0.0/16"
+spec:
+  tls:
+  - hosts:
+    - musikplayer.bacherik.de
+    secretName: nginx-tls
+  rules:
+  - host: "musikplayer.bacherik.de"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: nginx
+            port:
+              number: 80
