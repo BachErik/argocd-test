@@ -56,7 +56,7 @@ applications:
       - url: "https://github.com/BachErik/argocd-test.git"
         revision: HEAD
   musikplayer:
-    enabled: true
+    enabled: false
     sources:
       - url: "https://github.com/BachErik/argocd-test.git"
         revision: HEAD
