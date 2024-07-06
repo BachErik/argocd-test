@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: diskube
+  namespace: diskube
+  labels:
+    app: diskube
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: diskube
+  template:
+    metadata:
+      labels:
+        app: diskube
+    spec:
+      containers:
+      - name: diskube
+        image: bacherik/diskube:latest
+        env:
+          - name: DISCORD_BOT_TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: diskube
+                key: bot-token
+          - name: DISCORD_WEBHOOK
+            valueFrom:
+              secretKeyRef:
+                name: diskube
+                key: webhook
