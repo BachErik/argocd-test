@@ -28,7 +28,7 @@ applications:
       - url: "https://github.com/BachErik/argocd-test.git"
         revision: HEAD
   uptimekuma:
-    enabled: true
+    enabled: false
     sources:
       - url: "https://github.com/BachErik/argocd-test.git"
         revision: HEAD
