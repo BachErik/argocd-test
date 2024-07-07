@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: killedby
-        image: bacherik/killedby-app:latest
+        image: bacherik/killedby:latest
         ports:
         - containerPort: 8080
