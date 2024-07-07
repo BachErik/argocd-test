@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: killedby-deployment
+  namespace: killedby-namespace
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: killedby
+  template:
+    metadata:
+      labels:
+        app: killedby
+    spec:
+      containers:
+      - name: killedby
+        image: bacherik/killedby-app:latest
+        ports:
+        - containerPort: 8080
