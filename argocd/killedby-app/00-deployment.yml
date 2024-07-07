@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: killedby-deployment
+  name: killedby
   namespace: killedby
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: killedby
