@@ -11,7 +11,7 @@ spec:
   tls:
   - hosts:
     - musikplayer.bacherik.de
-    secretName: nginx-tls
+    secretName: musikplayer-tls
   rules:
   - host: "musikplayer.bacherik.de"
     http:

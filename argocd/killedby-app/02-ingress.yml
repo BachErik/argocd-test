@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: killedby-ingress
-  namespace: killedby-namespace
+  namespace: killedby
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt"
     kubernetes.io/ingress.class: traefik
@@ -20,6 +20,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: killedby-service
+            name: killedby
             port:
               number: 80

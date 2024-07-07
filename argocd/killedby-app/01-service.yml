@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: killedby-service
-  namespace: killedby-namespace
+  namespace: killedby
 spec:
   selector:
     app: killedby
