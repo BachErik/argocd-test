@@ -16,5 +16,10 @@ spec:
       containers:
       - name: killedby
         image: bacherik/killedby:latest
+        env:
+        - name: GITHUB_USERNAME
+          value: "bacherik"
+        - name: GITHUB_REPOSITORY
+          value: "killedby.json"
         ports:
         - containerPort: 8080
