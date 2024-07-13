@@ -53,17 +53,17 @@ data:
         - 1.17:
             - abbr: 17
               href: https://file.bacherik.de/minecraft/maps/ME-System/ME-System_1.17.zip
-              icon: minecraft.png
+              icon: minecraft.svg
               description: dwnload the minecraft ME-System for Minecraft version 1.17
         - 1.18 / 1.19:
             - abbr: 18
               href: https://file.bacherik.de/minecraft/maps/ME-System/ME-System_1.18-1.19.zip
-              icon: minecraft.png
+              icon: minecraft.svg
               description: download the minecraft ME-System for Minecraft versions 1.18 and 1.19
         - 1.20.x:
             - abbr: 20.x
               href: https://file.bacherik.de/minecraft/maps/ME-System/ME-System_1.20.x.zip
-              icon: minecraft.png
+              icon: minecraft.svg
               description: download the minecraft ME-System for Minecraft version 1.20.x
 
     - GitHub:
@@ -87,33 +87,38 @@ data:
         - Instagram:
             - abbr: I
               href: https://www.instagram.com/BachErik_live/
-              icon: instagram.png
+              icon: instagram.svg
               description: Mein Instagram der nicht regelmäßig ist
         - Twitter / X:
             - abbr: X
               href: https://twitter.com/BachErik_live
-              icon: twitter.png
+              icon: twitter.svg
               description: Meine meinung ist unwichtig
         - Discord:
             - abbr: DC
               href: https://discord.gg/9K8hVWcjFW
-              icon: discord.png
+              icon: discord.svg
               description: Mein Community Discord
         - Mastodon:
             - abbr: M
               href: https://mastodon.social/@BachErik
-              icon: mastodon.png
+              icon: mastodon.svg
               description: Falls Twitter austirbt
+        - E-Mail:
+            - abbr: E
+              href: mailto:info@bacherik.de
+              icon: mdi:email
+              description: Auf dem Klassischem wege
     - Entertainment:
         - YouTube:
             - abbr: YT
               href: https://youtube.com/@bacherik_live
-              icon: youtube.png
+              icon: youtube.svg
               description: Alle paar Jahre mal Videos
         - Twitch:
             - abbr: T
               href: https://twitch.tv/bacherik_live
-              icon: twitch.png
+              icon: twitch.svg
               description: Man darf ja mal träumen ...
   services.yaml: |
     # For configuration options and examples, please see:
@@ -126,7 +131,7 @@ data:
             description: Eine Platform von unter anderem Niklas die es insich hat.
         - Discord:
             href: https://discord.gg/2bWxKHn8Yd
-            icon: discord.png
+            icon: discord.svg
             description: Der Security School discord
         - Webseite:
             href: https://secschool.net/
@@ -135,7 +140,7 @@ data:
             ping: secschool.net
         - Twitch:
             href: https://twitch.tv/secscool
-            icon: twitch.png
+            icon: twitch.svg
     - Uptime:
         - Status page:
             href: https://status.bacherik.de
