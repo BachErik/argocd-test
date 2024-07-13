@@ -107,7 +107,7 @@ data:
         - E-Mail:
             - abbr: E
               href: mailto:info@bacherik.de
-              icon: mdi:email
+              icon: mdi-email-#F2FBFB
               description: Auf dem Klassischem wege
     - Entertainment:
         - YouTube:
