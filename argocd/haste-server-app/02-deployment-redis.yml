@@ -6,7 +6,7 @@ metadata:
   labels:
     app: haste-redis
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: haste-redis
