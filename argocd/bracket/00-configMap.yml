@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: bracket-config
+  namespace: bracket-app
+data:
+  NEXT_PUBLIC_API_BASE_URL: "http://bracket-backend.bracket-app.svc.cluster.local:8400"
+  NEXT_PUBLIC_HCAPTCHA_SITE_KEY: "10000000-ffff-ffff-ffff-000000000001"
+  ENVIRONMENT: "DEVELOPMENT"
+  PG_DSN: "postgresql://bracket_dev:bracket_dev@postgres:5432/bracket_dev"

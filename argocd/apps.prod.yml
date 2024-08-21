@@ -70,3 +70,8 @@ applications:
     sources:
       - url: "https://github.com/BachErik/argocd-test.git"
         revision: HEAD
+  bracket:
+    enabled: false
+    sources:
+      - url: "https://github.com/BachErik/argocd-test.git"
+        revision: HEAD
