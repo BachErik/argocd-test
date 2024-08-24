@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: Rollout
 metadata:
   name: nginx
   namespace: nginx-download
@@ -10,6 +10,20 @@ spec:
     matchLabels:
       app: nginx
   replicas: 3
+  strategy:
+    canary:
+      steps:
+      - setWeight: 20
+      - pause: {}
+      - setWeight: 40
+      - pause: {duration: 1000}
+      - setWeight: 60
+      - pause: {duration: 1000}
+      - setWeight: 80
+      - pause: {duration: 1000}
+      - setWeight: 90
+      - pause: {}
+  revisionHistoryLimit: 3
   template:
     metadata:
       labels:
