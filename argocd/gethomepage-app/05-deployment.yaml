@@ -1,5 +1,5 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
 metadata:
   name: homepage
   namespace: gethomepage
@@ -11,7 +11,18 @@ spec:
   revisionHistoryLimit: 3
   replicas: 3
   strategy:
-    type: RollingUpdate
+    canary:
+      steps:
+      - setWeight: 20
+      - pause: {}
+      - setWeight: 40
+      - pause: {duration: 1000}
+      - setWeight: 60
+      - pause: {duration: 1000}
+      - setWeight: 80
+      - pause: {duration: 1000}
+      - setWeight: 90
+      - pause: {}
   selector:
     matchLabels:
       app.kubernetes.io/name: homepage
