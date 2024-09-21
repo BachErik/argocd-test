@@ -14,7 +14,6 @@ spec:
     canary:
       steps:
       - setWeight: 20
-      - pause: {}
       - setWeight: 40
       - pause: {duration: 1000}
       - setWeight: 60
@@ -22,7 +21,6 @@ spec:
       - setWeight: 80
       - pause: {duration: 1000}
       - setWeight: 90
-      - pause: {}
   selector:
     matchLabels:
       app.kubernetes.io/name: homepage
