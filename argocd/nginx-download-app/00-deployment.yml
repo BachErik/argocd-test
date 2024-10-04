@@ -1,5 +1,5 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Rollout
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: nginx
   namespace: nginx-download
@@ -10,20 +10,6 @@ spec:
     matchLabels:
       app: nginx
   replicas: 3
-  strategy:
-    canary:
-      steps:
-      - setWeight: 20
-      - pause: {}
-      - setWeight: 40
-      - pause: {duration: 1000}
-      - setWeight: 60
-      - pause: {duration: 1000}
-      - setWeight: 80
-      - pause: {duration: 1000}
-      - setWeight: 90
-      - pause: {}
-  revisionHistoryLimit: 3
   template:
     metadata:
       labels:
