@@ -5,6 +5,11 @@ metadata:
   namespace: glance
 data:
   glance.yml: |
+    branding:
+      custom-footer: |
+        <p>Visit my Website <a href="https://bacherik.de">here</a></p>
+      logo-url: https://avatars.githubusercontent.com/u/75324423?v=4
+      favicon-url: https://avatars.githubusercontent.com/u/75324423?v=4
     pages:
       - name: Home
         columns:
@@ -43,8 +48,6 @@ data:
                 subreddit: selfhosted
           - size: small
             widgets:
-              - type: weather
-                location: London, United Kingdom
               - type: markets
                 markets:
                   - symbol: SPY
