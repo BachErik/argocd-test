@@ -30,20 +30,21 @@ data:
                     title: Ahmad Shadeed
               - type: twitch-channels
                 channels:
-                  - theprimeagen
-                  - cohhcarnage
-                  - christitustech
-                  - blurbs
-                  - asmongold
-                  - jembawls
+                  - TheJoCraft_live
+                  - BastiGHG
+                  - BachErik_live
+                  - derBanko
+                  - secschool
+                  - nikoverflow
           - size: full
             widgets:
               - type: hacker-news
               - type: videos
                 channels:
-                  - UCR-DXc1voovS8nhAvccRZhg # Jeff Geerling
-                  - UCv6J_jJa8GJqFwQNgNrMuww # ServeTheHome
-                  - UCOk-gHyjcWZNj3Br4oxwh0A # Techno Tim
+                  - @BachErik_live
+                  - @LinusTechTips
+                  - @beyondfireship
+                  - @Fireship
               - type: reddit
                 subreddit: selfhosted
           - size: small
