@@ -41,10 +41,11 @@ data:
               - type: hacker-news
               - type: videos
                 channels:
-                  - @BachErik_live
-                  - @LinusTechTips
-                  - @beyondfireship
-                  - @Fireship
+                  - UCnqq0B0j3ySKg9G1GM-WfIQ # BachErik
+                  - UCXuqSBlHAE6Xw-yeJA0Tunw # Linus Tech Tips
+                  - UC2Xd-TjJByJyK2w1zNwY0zQ # Beyond Fireship
+                  - UCsBjURrPoezykLs9EqgamOA # Fireship
+                  - UCdC0An4ZPNr_YiFiYoVbwaw # Daily Dose Of Internet
               - type: reddit
                 subreddit: selfhosted
           - size: small
