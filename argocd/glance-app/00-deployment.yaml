@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: glance-deployment
+  name: glance
   namespace: glance
 spec:
   replicas: 1
@@ -31,7 +31,7 @@ spec:
       volumes:
       - name: glance-config
         configMap:
-          name: glance-config
+          name: glance
       - name: timezone
         hostPath:
           path: /etc/timezone
