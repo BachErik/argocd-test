@@ -75,3 +75,8 @@ applications:
     sources:
       - url: "https://github.com/BachErik/argocd-test.git"
         revision: HEAD
+  glance:
+    enabled: true
+    sources:
+      - url: "https://github.com/BachErik/argocd-test.git"
+        revision: HEAD
