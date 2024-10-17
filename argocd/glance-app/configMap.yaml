@@ -37,6 +37,7 @@ data:
                   - TheJoCraft_live
                   - BastiGHG
                   - derBanko
+                collapse-after: -1
           - size: full
             widgets:
               - type: hacker-news
