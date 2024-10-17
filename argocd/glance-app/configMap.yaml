@@ -47,8 +47,6 @@ data:
                   - UC2Xd-TjJByJyK2w1zNwY0zQ # Beyond Fireship
                   - UCsBjURrPoezykLs9EqgamOA # Fireship
                   - UCdC0An4ZPNr_YiFiYoVbwaw # Daily Dose Of Internet
-              - type: reddit
-                subreddit: selfhosted
                 
           - size: small
             widgets:
