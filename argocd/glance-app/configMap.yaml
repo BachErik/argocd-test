@@ -21,7 +21,7 @@ data:
                 timezones:
                   - timezone: Europe/London
                     label: London
-                  - timezone: America/Minnesota
+                  - timezone: America/Chicago
                     label: 	Minnesota
                   - timezone: America/Denver
                     label: Denver
