@@ -52,7 +52,7 @@ data:
             widgets:
               - type: markets
                 markets:
-                  - symbol: INL
+                  - symbol: INTC
                     name: Intel
                   - symbol: SPY
                     name: S&P 500
