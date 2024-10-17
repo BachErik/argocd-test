@@ -21,13 +21,13 @@ data:
                 collapse-after: 3
                 cache: 3h
                 feeds:
-                  - url: https://ciechanow.ski/atom.xml
-                  - url: https://www.joshwcomeau.com/rss.xml
-                    title: Josh Comeau
+                  - url: https://xkcd.com/rss.xml
+                  - url: http://www.turnoff.us/feed.xml
                   - url: https://samwho.dev/rss.xml
-                  - url: https://awesomekling.github.io/feed.xml
-                  - url: https://ishadeed.com/feed.xml
-                    title: Ahmad Shadeed
+                  - url: https://www.reddit.com/r/softwaregore.rss
+                    title: SoftwareGore SubReddit
+                  - url: https://programming.dev/feeds/c/programmer_humor.xml?sort=New
+                    title: Programming.Dev
               - type: twitch-channels
                 channels:
                   - TheJoCraft_live
@@ -48,6 +48,7 @@ data:
                   - UCdC0An4ZPNr_YiFiYoVbwaw # Daily Dose Of Internet
               - type: reddit
                 subreddit: selfhosted
+                
           - size: small
             widgets:
               - type: markets
