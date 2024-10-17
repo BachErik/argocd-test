@@ -106,6 +106,17 @@ data:
                     label: 	Minnesota
                   - timezone: America/Denver
                     label: Denver
+              - type: releases
+                show-source-icon: true
+                repositories:
+                  - immich-app/immich
+                  - gethomepage/homepage
+                  - go-gitea/gitea
+                  - jellyfin/jellyfin
+                  - glanceapp/glance
+                  - codeberg:redict/redict
+                  - gitlab:fdroid/fdroidclient
+                  - dockerhub:gotify/server
               - type: markets
                 markets:
                   - symbol: INTC
