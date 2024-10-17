@@ -17,7 +17,7 @@ data:
             widgets:
               - type: calendar
               - type: rss
-                limit: 10
+                limit: 100
                 collapse-after: 3
                 cache: 3h
                 feeds:
