@@ -16,6 +16,15 @@ data:
           - size: small
             widgets:
               - type: calendar
+              - type: clock
+                hour-format: 24h
+                timezones:
+                  - timezone: Europe/London
+                    label: London
+                  - timezone: America/Minnesota
+                    label: 	Minnesota
+                  - timezone: America/Denver
+                    label: Denver
               - type: rss
                 limit: 100
                 collapse-after: 3
