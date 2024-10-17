@@ -28,6 +28,7 @@ data:
                     title: SoftwareGore SubReddit
                   - url: https://programming.dev/feeds/c/programmer_humor.xml?sort=New
                     title: Programming.Dev
+                  - url: https://lemmy.ml/feeds/c/programmerhumor.xml?sort=New
               - type: twitch-channels
                 channels:
                   - TheJoCraft_live
