@@ -10,6 +10,7 @@ data:
         <p>Visit my Website <a href="https://bacherik.de">here</a></p>
       logo-url: https://avatars.githubusercontent.com/u/75324423?v=4
       favicon-url: https://avatars.githubusercontent.com/u/75324423?v=4
+
     pages:
       - name: Home
         columns:
@@ -38,63 +39,65 @@ data:
                   - BastiGHG
                   - derBanko
                 collapse-after: -1
+
           - size: full
             widgets:
-            - type: search
-              search-engine: duckduckgo
-              new-tab: true
-              autofocus: true
-              bangs:
-                - title: Google
-                  shortcut: "!g"
-                  url: https://www.google.com/search?q={QUERY}
-                - title: YouTube
-                  shortcut: "!yt"
-                  url: https://www.youtube.com/results?search_query={QUERY}
-                - title: Wikipedia
-                  shortcut: "!wp"
-                  url: https://en.wikipedia.org/wiki/Special:Search?search={QUERY}
-                - title: Reddit
-                  shortcut: "!rd"
-                  url: https://www.reddit.com/search?q={QUERY}
-                - title: Amazon
-                  shortcut: "!amz"
-                  url: https://www.amazon.com/s?k={QUERY}
-                - title: GitHub
-                  shortcut: "!gh"
-                  url: https://github.com/search?q={QUERY}
-                - title: StackOverflow
-                  shortcut: "!so"
-                  url: https://stackoverflow.com/search?q={QUERY}
-                - title: Twitter
-                  shortcut: "!tw"
-                  url: https://twitter.com/search?q={QUERY}
-                - title: DuckDuckGo
-                  shortcut: "!ddg"
-                  url: https://duckduckgo.com/?q={QUERY}
-                - title: Bing
-                  shortcut: "!b"
-                  url: https://www.bing.com/search?q={QUERY}
-                - title: IMDB
-                  shortcut: "!imdb"
-                  url: https://www.imdb.com/find?q={QUERY}
-                - title: Twitch
-                  shortcut: "!twitch"
-                  url: https://www.twitch.tv/search?term={QUERY}
-                - title: Yahoo
-                  shortcut: "!yh"
-                  url: https://search.yahoo.com/search?p={QUERY}
-                - title: eBay
-                  shortcut: "!eb"
-                  url: https://www.ebay.com/sch/i.html?_nkw={QUERY}
-                - title: Ecosia
-                  shortcut: "!ec"
-                  url: https://www.ecosia.org/search?q={QUERY}
-                - title: Startpage
-                  shortcut: "!sp"
-                  url: https://www.startpage.com/do/dsearch?query={QUERY}
-
+              - type: search
+                search-engine: duckduckgo
+                new-tab: true
+                autofocus: true
+                bangs:
+                  - title: Google
+                    shortcut: "!g"
+                    url: https://www.google.com/search?q={QUERY}
+                  - title: YouTube
+                    shortcut: "!yt"
+                    url: https://www.youtube.com/results?search_query={QUERY}
+                  - title: Wikipedia
+                    shortcut: "!wp"
+                    url: https://en.wikipedia.org/wiki/Special:Search?search={QUERY}
+                  - title: Reddit
+                    shortcut: "!rd"
+                    url: https://www.reddit.com/search?q={QUERY}
+                  - title: Amazon
+                    shortcut: "!amz"
+                    url: https://www.amazon.com/s?k={QUERY}
+                  - title: GitHub
+                    shortcut: "!gh"
+                    url: https://github.com/search?q={QUERY}
+                  - title: StackOverflow
+                    shortcut: "!so"
+                    url: https://stackoverflow.com/search?q={QUERY}
+                  - title: Twitter
+                    shortcut: "!tw"
+                    url: https://twitter.com/search?q={QUERY}
+                  - title: DuckDuckGo
+                    shortcut: "!ddg"
+                    url: https://duckduckgo.com/?q={QUERY}
+                  - title: Bing
+                    shortcut: "!b"
+                    url: https://www.bing.com/search?q={QUERY}
+                  - title: IMDB
+                    shortcut: "!imdb"
+                    url: https://www.imdb.com/find?q={QUERY}
+                  - title: Twitch
+                    shortcut: "!twitch"
+                    url: https://www.twitch.tv/search?term={QUERY}
+                  - title: Yahoo
+                    shortcut: "!yh"
+                    url: https://search.yahoo.com/search?p={QUERY}
+                  - title: eBay
+                    shortcut: "!eb"
+                    url: https://www.ebay.com/sch/i.html?_nkw={QUERY}
+                  - title: Ecosia
+                    shortcut: "!ec"
+                    url: https://www.ecosia.org/search?q={QUERY}
+                  - title: Startpage
+                    shortcut: "!sp"
+                    url: https://www.startpage.com/do/dsearch?query={QUERY}
+                  
               - type: hacker-news
+
               - type: videos
                 channels:
                   - UCFgBYlz5LwymPSWBX-G6hBA # 2 Bored Guys
