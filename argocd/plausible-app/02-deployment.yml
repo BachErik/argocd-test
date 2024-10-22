@@ -35,3 +35,6 @@ spec:
         volumeMounts:
         - name: plausible-data
           mountPath: /var/lib/plausible
+      volumes:
+      - name: plausible-data
+        emptyDir: {}
