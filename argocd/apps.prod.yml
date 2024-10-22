@@ -80,3 +80,10 @@ applications:
     sources:
       - url: "https://github.com/BachErik/argocd-test.git"
         revision: HEAD
+  plausible:
+    enabled: true
+    sources:
+      - chart: plausible
+        url: "https://charts.pascaliske.dev"
+        version: 1.41.0
+        values: true
