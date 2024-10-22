@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: plausible
+  namespace: plausible
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: plausible
+  template:
+    metadata:
+      labels:
+        app: plausible
+    spec:
+      containers:
+      - name: plausible
+        image: ghcr.io/plausible/community-edition:v2.1.4
+        ports:
+        - containerPort: 8000
+        command:
+        - sh
+        - -c
+        - |
+          /entrypoint.sh db createdb && /entrypoint.sh db migrate && /entrypoint.sh run
+        env:
+        - name: BASE_URL
+          value: "http://localhost:8000"
+        - name: SECRET_KEY_BASE
+          value: "secret-key-placeholder"
+        - name: DATABASE_URL
+          value: "postgresql://postgres:postgres@plausible-db:5432/postgres"
+        - name: CLICKHOUSE_DATABASE_URL
+          value: "http://plausible-events-db:8123"
+        volumeMounts:
+        - name: plausible-data
+          mountPath: /var/lib/plausible
+  volumes:
+  - name: plausible-data
+    emptyDir: {}
