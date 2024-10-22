@@ -26,11 +26,7 @@ spec:
         - name: event-logs
           mountPath: /var/log/clickhouse-server
         - name: config-volume
-          mountPath: /etc/clickhouse-server/config.d
-          subPath: logs.xml
-        - name: config-volume
-          mountPath: /etc/clickhouse-server/config.d
-          subPath: ipv4-only.xml
+          mountPath: /etc/clickhouse-server/config.d/logs.xml
   volumeClaimTemplates:
   - metadata:
       name: event-data
