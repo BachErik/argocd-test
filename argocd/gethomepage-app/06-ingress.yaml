@@ -8,7 +8,7 @@ metadata:
   annotations:
     gethomepage.dev/description: Dynamically Detected Homepage
     gethomepage.dev/enabled: "false"
-    gethomepage.dev/group: Self-Hosted
+    gethomepage.dev/group: SelfHosted
     gethomepage.dev/icon: homepage.png
     gethomepage.dev/name: Homepage
     cert-manager.io/cluster-issuer: "letsencrypt"

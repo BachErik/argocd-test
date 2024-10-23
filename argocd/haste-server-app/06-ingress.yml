@@ -6,7 +6,7 @@ metadata:
   annotations:
     gethomepage.dev/description: Hastebin/Pastebin fork
     gethomepage.dev/enabled: "true"
-    gethomepage.dev/group: Self-Hosted
+    gethomepage.dev/group: SelfHosted
     gethomepage.dev/icon: https://haste.bacherik.de/favicon.ico
     gethomepage.dev/name: Haste-server
     cert-manager.io/cluster-issuer: "letsencrypt"
