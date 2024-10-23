@@ -44,6 +44,19 @@ data:
       });
     });
 
+    (function() {
+        var plausible = function() {
+            (window.plausible.q = window.plausible.q || []).push(arguments);
+        };
+        window.plausible = window.plausible || plausible;
+
+        var script = document.createElement('script');
+        script.defer = true;
+        script.setAttribute('data-domain', 'bacherik.de');
+        script.src = 'https://plausible.bacherik.de/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js';
+        document.head.appendChild(script);
+    })();
+
 
   bookmarks.yaml: |
     # For configuration options and examples, please see:
