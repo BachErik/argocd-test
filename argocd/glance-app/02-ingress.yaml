@@ -4,11 +4,6 @@ metadata:
   name: glance
   namespace: glance
   annotations:
-    gethomepage.dev/description: Dashboard for the latest news
-    gethomepage.dev/enabled: "true"
-    gethomepage.dev/group: Self-Hosted
-    gethomepage.dev/icon: mdi-monitor-dashboard
-    gethomepage.dev/name: Glance
     cert-manager.io/cluster-issuer: "letsencrypt"
     kubernetes.io/ingress.class: traefik
     ingress.kubernetes.io/whitelist-source-range: "192.168.0.0/16"

@@ -7,11 +7,6 @@ metadata:
     cert-manager.io/cluster-issuer: "letsencrypt"
     kubernetes.io/ingress.class: traefik
     ingress.kubernetes.io/whitelist-source-range: "192.168.0.0/16"
-    gethomepage.dev/description: List of killed tech-products
-    gethomepage.dev/enabled: "true"
-    gethomepage.dev/group: SelfHosted
-    gethomepage.dev/icon: homepage.png
-    gethomepage.dev/name: KilledBy-(BachErik)
 spec:
   tls:
   - hosts:
