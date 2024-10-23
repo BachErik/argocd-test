@@ -31,7 +31,7 @@ spec:
         - name: DATABASE_URL
           value: "postgresql://postgres:postgres@plausible-db-service:5432/postgres"
         - name: CLICKHOUSE_DATABASE_URL
-          value: "http://plausible-events-db:8123/default"
+          value: "http://plausible-events-db-service:8123/default"
         volumeMounts:
         - name: plausible-data
           mountPath: /var/lib/plausible
