@@ -25,7 +25,7 @@ spec:
           /entrypoint.sh db createdb && /entrypoint.sh db migrate && /entrypoint.sh run
         env:
         - name: BASE_URL
-          value: "http://localhost:8000"
+          value: "https://plausible.bacherik.de"
         - name: SECRET_KEY_BASE
           value: "NUt7ZrASObHDUwlR+B+uJpDp7C9/2Lzu6DMEG226LVgtM/W6+91os6YzVRpW3fns"
         - name: DATABASE_URL
