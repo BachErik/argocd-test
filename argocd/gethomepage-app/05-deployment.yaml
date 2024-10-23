@@ -5,14 +5,6 @@ metadata:
   namespace: gethomepage
   annotations:
     reloader.stakater.com/auto: "true"
-    gethomepage.dev/enabled: "true"
-    gethomepage.dev/description: Homepage
-    gethomepage.dev/group: SecSchool
-    gethomepage.dev/icon: gethomepage.png
-    gethomepage.dev/name: gethomepage
-    gethomepage.dev/widget.type: "gethomepage"
-    gethomepage.dev/widget.url: "https://bacherik.de"
-    gethomepage.dev/pod-selector: ""
   labels:
     app.kubernetes.io/name: homepage
 spec:
