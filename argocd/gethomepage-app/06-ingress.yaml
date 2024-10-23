@@ -31,11 +31,6 @@ spec:
                 name: homepage
                 port:
                   number: 3000
-                sticky:
-                  cookie:
-                    httpOnly: true
-                    secure: true
-                    sameSite: none
     - host: "www.bacherik.de"
       http:
         paths:
@@ -45,9 +40,4 @@ spec:
               service:
                 name: homepage
                 port:
-                  number: 3000      
-                sticky:
-                  cookie:
-                    httpOnly: true
-                    secure: true
-                    sameSite: none
+                  number: 3000
