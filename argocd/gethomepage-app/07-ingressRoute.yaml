@@ -13,7 +13,7 @@ spec:
       match: Host(`bacherik.de`)
       services:
         - kind: Service
-          name: homepageb
+          name: homepage
           port: 3000
           sticky:
             cookie:
@@ -24,7 +24,7 @@ spec:
       match: Host(`www.bacherik.de`)
       services:
         - kind: Service
-          name: homepageb
+          name: homepage
           port: 3000
           sticky:
             cookie:
