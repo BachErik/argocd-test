@@ -99,6 +99,12 @@ data:
                   
               - type: hacker-news
 
+              - type: html
+                source: |
+                  <script defer data-domain="dashboard.bacherik.de" src="https://plausible.bacherik.de/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"></script>
+                  <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+
+
               - type: videos
                 channels:
                   - UCFgBYlz5LwymPSWBX-G6hBA # 2 Bored Guys
