@@ -42,3 +42,10 @@ spec:
       resources:
         requests:
           storage: 512Mi
+  - metadata:
+      name: config-volume
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 512Mi
