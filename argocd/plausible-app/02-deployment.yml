@@ -29,9 +29,9 @@ spec:
         - name: SECRET_KEY_BASE
           value: "NUt7ZrASObHDUwlR+B+uJpDp7C9/2Lzu6DMEG226LVgtM/W6+91os6YzVRpW3fns"
         - name: DATABASE_URL
-          value: "postgresql://postgres:postgres@plausible-db-service:5432/postgres"
+          value: "postgresql://postgres:postgres@plausible-db-service.plausible.svc.cluster.local:5432/postgres"
         - name: CLICKHOUSE_DATABASE_URL
-          value: "http://plausible-events-db-service:8123/default"
+          value: "http://plausible-events-db-service.plausible.svc.cluster.local:8123/default"
         volumeMounts:
         - name: plausible-data
           mountPath: /var/lib/plausible
