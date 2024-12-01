@@ -13,6 +13,7 @@ metadata:
     gethomepage.dev/name: Homepage
     cert-manager.io/cluster-issuer: "letsencrypt"
 spec:
+  ingressClassName: traefik
   tls:
     - secretName: bacherik-de-tls
       hosts:

@@ -6,6 +6,7 @@ metadata:
   annotations:
     gethomepage.dev/description: Hastebin/Pastebin fork
 spec:
+  ingressClassName: traefik
   tls:
   - hosts:
     - haste.bacherik.de
